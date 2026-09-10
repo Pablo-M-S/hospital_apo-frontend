@@ -7,6 +7,8 @@ import MedicosList from './pages/Medicos/MedicosList';
 import MedicoForm from './pages/Medicos/MedicoForm';
 import UnidadesList from './pages/Unidades/UnidadesList';
 import UnidadeForm from './pages/Unidades/UnidadeForm';
+import ConsultasList from './pages/Consultas/ConsultasList';
+import ConsultaForm from './pages/Consultas/ConsultaForm';
 import DashboardLayout from './components/Layout/DashboardLayout';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
@@ -27,7 +29,8 @@ export default function App() {
           <Route path="/dashboard/unidades" element={<UnidadesList />} />
           <Route path="/dashboard/unidades/novo" element={<UnidadeForm />} />
           <Route path="/dashboard/unidades/:id/editar" element={<UnidadeForm />} />
-          {/* Próxima rota (consultas) entra aqui */}
+          <Route path="/dashboard/consultas" element={<ConsultasList />} />
+          <Route path="/dashboard/consultas/nova" element={<ConsultaForm />} />
         </Route>
       </Route>
 
