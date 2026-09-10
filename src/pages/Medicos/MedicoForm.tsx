@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { api } from '../../lib/api';
 import { estadosBrasileiros } from '../../lib/estadosBrasileiros';
+import { AgendaMedico } from '../../components/AgendaMedico';
 import type { Medico, Especialidade, Unidade } from '../../types/medico';
 
 interface FormData {
@@ -286,6 +287,8 @@ export default function MedicoForm() {
           {salvando ? 'Salvando...' : 'Salvar'}
         </button>
       </form>
+
+      {editando && id && <AgendaMedico medicoId={id} unidades={unidades} />}
     </div>
   );
 }
